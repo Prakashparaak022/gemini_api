@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/pacaembu-trial');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+/* grid */
+.grid{
+  border:2px solid #17bf81;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* background: rgb(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px); */
+} 
+.grid-child {
+  transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+.grid-child:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+
+.grid:hover{
+ /* background-color: #17bf81; */
+ background: linear-gradient(to right top, #76f897, #07c659);
+ color: #fff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery-image {
+  width: calc(33.33% - 10px);
+  object-fit: cover;
+  height: 200px;
+}
+/* iMAGES */
+
+.main {
+  /* background-image: linear-gradient(to bottom, #4a5568, #1f2937) !important; */
+  /* background: #f1f1f1; */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  padding-left: 2rem;
+  background-color: #2ecc6a !important;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  width: 100%;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.btn:hover{
+  opacity: 0.9 !important;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.textarea {
+  width: 100%;
+  height: 7rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  background-color: #4a5568;
+  color: #f7fafc;
+  outline: none;
+}
+
+p{
+  color: #000 !important;
+}
+.result {
+  margin-top: -2rem;
+  white-space: pre-line;
+  color: #f7fafc;
+}
+.gallery-image{
+  width: calc(33.33% - 10px);
+  /* object-fit: cover !important; */
+}
+
+.textarea:focus{
+  border: 3px solid #17bf81!important;
+}
+
+.green{
+  color: #17bf81;
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -11;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+/*
+.hero{
+  // margin-top: 10rem !important;
+}
+*/
+
+.title{
+  font-family: 'Pacaembu Trial', sans-serif;
+}
+
+.grid-carousel{
+  position: relative;
+  overflow: hidden;
+}
+.grid-carousel1{
+  background: linear-gradient(to right top, #65df84, #24c96c);
+  color: #fff;
+  padding: 10px;
+  margin-right: 20px;
+  position: relative;
+  bottom: 20px;
+  right: 12px;
+  width:110%;
+}
+
+.grid-carousel1:hover{
+  background: transparent;
+  color: #fff; 
+}
+.grid-carousel:hover{
+  background: linear-gradient(to right top, #65df84, #24c96c);
+  color: #fff;
+}
+
+.image-overlay p{
+  color: #fff !important;
+}
+
+.carousel-items{
+  margin-right: 25px;
+}
+/* New */
+.boxContainers:hover{
+  box-shadow: 1px 1px 10px 1px #17bf81 !important;
+}
+
+
+.iSymbol {
+  font-weight: bolder;
+  background: -webkit-linear-gradient(#eee, #0a9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Animation Color Change */ 
+@keyframes gradientAnimation {
+  0% {
+    background: -webkit-linear-gradient(-135deg, #ff7f5fdb, #feb47bd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  20% {
+    background: -webkit-linear-gradient(-135deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background: -webkit-linear-gradient(-135deg, #6b11cbd3, #2574fcca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  45% {
+    background: -webkit-linear-gradient(-135deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: -webkit-linear-gradient(-135deg, #ff6a00c5, #ee0978c5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  70% {
+    background: -webkit-linear-gradient(-135deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75% {
+    background: -webkit-linear-gradient(-135deg, #00c8ffc8, #0073ffb9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  95% {
+    background: -webkit-linear-gradient(-135deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: -webkit-linear-gradient(-135deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
