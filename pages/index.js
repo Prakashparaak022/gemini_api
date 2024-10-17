@@ -38,7 +38,7 @@ function Home() {
         <div className="container mt-5">
           <div className="d-flex align-items-center justify-content-center">
             <h1 className="text-center title headerFont">
-              Prakash<span className="green">'</span>s A
+              Prakash<span className="green">&apos;</span>s A
               <span className="green iSymbol">i</span>
             </h1>
             <div style={{ margin: 0, marginLeft: "5px" }}>
